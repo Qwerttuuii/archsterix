@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import "./Home.css";
 import siteConfig from "../config/SiteConfig";
@@ -59,8 +60,12 @@ const Home = () => {
           </p>
 
           <div className="hero-buttons">
-            <button className="btn-primary">VIEW OUR PROJECTS</button>
-            <button className="btn-outline">GET IN TOUCH</button>
+            <Link className="btn-primary" to="/projects">
+              VIEW OUR PROJECTS
+            </Link>
+            <Link className="btn-outline" to="/contact">
+              GET IN TOUCH
+            </Link>
           </div>
         </div>
 
