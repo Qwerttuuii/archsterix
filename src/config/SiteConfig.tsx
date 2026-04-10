@@ -4,6 +4,8 @@ const siteConfig = {
 
   companyName: "ARCH-STERIX",
   tagline: "NIGERIA LIMITED",
+  ceoName: "CEO Name",
+  ceoTitle: "Chief Executive Officer",
 
   phone: "080-9895-1904",
 };

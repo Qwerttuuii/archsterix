@@ -1,0 +1,159 @@
+.footer {
+  background: #060606;
+  color: #fff;
+  padding: 80px 80px 0;
+  border-top: 1px solid rgba(201, 166, 70, 0.15);
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ── Grid ── */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* ── Brand column ── */
+.footer-logo {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 18px;
+  color: #fff;
+}
+
+.footer-logo .gold {
+  color: #c9a646;
+}
+
+.footer-desc {
+  font-size: 14px;
+  line-height: 1.75;
+  color: #888;
+  max-width: 300px;
+}
+
+/* ── Columns ── */
+.footer-heading {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: #c9a646;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links li a {
+  font-size: 14px;
+  color: #888;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links li a:hover {
+  color: #fff;
+}
+
+/* ── Contact column ── */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 14px;
+  color: #888;
+  line-height: 1.65;
+}
+
+.contact-info a {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-info a:hover {
+  color: #c9a646;
+}
+
+.contact-info .phone {
+  color: #aaa;
+}
+
+/* ── Bottom bar ── */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 28px 0;
+}
+
+.copyright {
+  font-size: 12.5px;
+  color: #555;
+}
+
+.footer-links-bottom {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-links-bottom a {
+  font-size: 12.5px;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links-bottom a:hover {
+  color: #c9a646;
+}
+
+.tagline {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: #333;
+  text-transform: uppercase;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 60px 40px 0;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 60px 24px 0;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .tagline {
+    display: none;
+  }
+}

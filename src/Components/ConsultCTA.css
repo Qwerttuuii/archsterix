@@ -1,0 +1,117 @@
+.consult-cta {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 110px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.consult-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(201, 166, 70, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 166, 70, 0.06) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+}
+
+.cta-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.cta-left {
+  flex: 1;
+  min-width: 300px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.9s ease;
+}
+
+.cta-left.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cta-title {
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+.cta-title span {
+  color: #c9a646;
+}
+
+.cta-subtitle {
+  font-size: 19px;
+  line-height: 1.65;
+  color: #ccc;
+  max-width: 520px;
+}
+
+.cta-right {
+  flex: 0 0 380px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.9s ease 0.1s;
+}
+
+.cta-right.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.schedule-btn {
+  background: #c9a646;
+  color: #111;
+  border: none;
+  padding: 20px 48px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.4s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.schedule-btn:hover {
+  background: #fff;
+  color: #111;
+  transform: translateY(-3px);
+}
+
+.cta-note {
+  margin-top: 20px;
+  font-size: 14.5px;
+  color: #999;
+}
+
+@media (max-width: 992px) {
+  .consult-cta {
+    padding: 90px 40px;
+  }
+  .cta-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-title {
+    font-size: 42px;
+  }
+}
