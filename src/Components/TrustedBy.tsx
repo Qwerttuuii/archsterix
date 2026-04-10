@@ -32,7 +32,7 @@ const TrustedBy = () => {
     "/clients/kaduna.jpg",
     "/clients/sterlinglogo02.jpg",
     "/clients/gtbank.png",
-    "/clients/fidelitylogo2.jpg",
+    "/clients/fidelitylogo2.png",
     "/clients/skyelogo.png",
     "/clients/urbanshelter.jpg",
     "/clients/brains.jpg",
