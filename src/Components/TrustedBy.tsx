@@ -28,12 +28,12 @@ const TrustedBy = () => {
     "/clients/nddc.jpg",
     "/clients/ranao.jpg",
     "/clients/fcda.jpg",
-    "/clients/fcda.jpg",        // duplicate for seamless loop
+    "/clients/brains.jpg",        // duplicate for seamless loop
     "/clients/kaduna.jpg",
     "/clients/sterlinglogo02.jpg",
     "/clients/gtbank.png",
     "/clients/fidelitylogo2.jpg",
-    "/clients/skyelogo.jpg",
+    "/clients/skyelogo.png",
     "/clients/urbanshelter.jpg",
     "/clients/brains.jpg",
     "/clients/fcda.jpg",        // duplicate for seamless loop

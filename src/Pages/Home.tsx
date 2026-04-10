@@ -9,7 +9,7 @@ import FeaturedProjects from "../Components/FeaturedProjects";
 import TrustedBy from "../Components/TrustedBy";
 import ConsultCTA from "../Components/ConsultCTA";
 import Footer from "../Components/Footer";
-
+import FAQ from "../Components/FAQ";
 const stats = [
   { value: 15, suffix: "+", label: "YEARS EXPERIENCE" },
   { value: 50, suffix: "+", label: "PROJECTS COMPLETED" },
@@ -92,6 +92,7 @@ const Home = () => {
       <FeaturedProjects />
       <TrustedBy />
       <ConsultCTA />
+      <FAQ />
       <Footer />
     </>
   );

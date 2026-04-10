@@ -2,11 +2,13 @@ import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home'
 import InfoPage from './Pages/InfoPage'
+import Contact from './Pages/Contact'
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+
       <Route
         path="/about"
         element={
@@ -16,6 +18,7 @@ function App() {
           />
         }
       />
+
       <Route
         path="/services"
         element={
@@ -25,6 +28,7 @@ function App() {
           />
         }
       />
+
       <Route
         path="/projects"
         element={
@@ -34,6 +38,7 @@ function App() {
           />
         }
       />
+
       <Route
         path="/clients"
         element={
@@ -43,6 +48,7 @@ function App() {
           />
         }
       />
+
       <Route
         path="/blog"
         element={
@@ -52,15 +58,9 @@ function App() {
           />
         }
       />
-      <Route
-        path="/contact"
-        element={
-          <InfoPage
-            title="Contact Us"
-            description="Get in touch with Arch-Sterix Nigeria Limited to discuss your next project, request a consultation, or ask us a question."
-          />
-        }
-      />
+
+    
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   )
 }

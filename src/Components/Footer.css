@@ -157,3 +157,36 @@
     display: none;
   }
 }
+/* Social Icons */
+/* Modern Social Icons */
+.social-icons {
+  margin-top: 32px;
+  display: flex;
+  gap: 14px;
+}
+
+.social-icons a {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(201, 166, 70, 0.1);
+}
+
+.social-icons a:hover {
+  color: #c9a646;
+  background: rgba(201, 166, 70, 0.15);
+  border-color: #c9a646;
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 10px 20px rgba(201, 166, 70, 0.2);
+}
+
+.social-icons svg {
+  width: 22px;
+  height: 22px;
+}

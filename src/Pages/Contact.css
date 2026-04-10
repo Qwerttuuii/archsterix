@@ -1,0 +1,173 @@
+/* HERO */
+.contact-hero {
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.hero-content {
+  position: relative;
+  padding: 0 80px;
+  max-width: 700px;
+}
+
+.tag {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #c9a646;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  line-height: 1.2;
+}
+
+.hero-content span {
+  color: #c9a646;
+}
+
+.hero-content p {
+  margin-top: 20px;
+  color: #ccc;
+}
+
+/* SECTION */
+.contact-section {
+  padding: 100px 80px;
+  background: #f9f9f9;
+}
+
+.contact-container {
+  display: flex;
+  gap: 80px;
+}
+
+/* LEFT */
+.contact-left {
+  flex: 1;
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: 0.8s ease;
+}
+
+.contact-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.contact-left h2 {
+  font-size: 42px;
+}
+
+.contact-left span {
+  color: #c9a646;
+}
+
+.contact-left p {
+  margin: 20px 0;
+  color: #555;
+}
+
+/* INFO */
+.info-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+/* RIGHT */
+.contact-right {
+  flex: 1;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+
+  opacity: 0;
+  transform: translateX(60px);
+  transition: 0.8s ease;
+}
+
+.contact-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* FLOATING INPUT */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #ddd;
+  outline: none;
+  background: none;
+}
+
+.input-group label {
+  position: absolute;
+  left: 15px;
+  top: 16px;
+  color: #999;
+  transition: 0.3s;
+  background: white;
+  padding: 0 5px;
+}
+
+.input-group input:focus + label,
+.input-group textarea:focus + label,
+.input-group input:valid + label,
+.input-group textarea:valid + label {
+  top: -10px;
+  font-size: 12px;
+  color: #c9a646;
+}
+
+/* BUTTON */
+.btn-send {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  background: linear-gradient(135deg, #c9a646, #d6b25e);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-send:hover {
+  transform: translateY(-2px);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .hero-content {
+    padding: 0 20px;
+  }
+
+  .contact-section {
+    padding: 60px 20px;
+  }
+}
