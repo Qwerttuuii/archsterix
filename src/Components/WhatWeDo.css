@@ -208,3 +208,27 @@
     gap: 28px;
   }
 }
+
+@media (max-width: 480px) {
+  .what-we-do {
+    padding: 60px 15px;
+  }
+  .what-title {
+    font-size: 32px;
+  }
+  .what-subtitle {
+    font-size: 16px;
+  }
+  .services-grid {
+    gap: 20px;
+  }
+  .service-item {
+    padding: 24px;
+  }
+  .service-title {
+    font-size: 18px;
+  }
+  .service-desc {
+    font-size: 14px;
+  }
+}

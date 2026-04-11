@@ -151,3 +151,22 @@
     max-height: 50px;
   }
 }
+
+@media (max-width: 480px) {
+  .trusted-by {
+    padding: 60px 15px;
+  }
+  .trusted-title {
+    font-size: 32px;
+  }
+  .logos-track {
+    gap: 40px;
+  }
+  .logo-item {
+    width: 140px;
+    height: 70px;
+  }
+  .client-logo {
+    max-height: 50px;
+  }
+}

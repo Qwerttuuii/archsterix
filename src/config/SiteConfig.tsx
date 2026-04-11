@@ -4,7 +4,7 @@ const siteConfig = {
 
   companyName: "ARCH-STERIX",
   tagline: "NIGERIA LIMITED",
-  ceoName: "CEO Name",
+  ceoName: "Arc. David Ochigbo mnia fcism ",
   ceoTitle: "Chief Executive Officer",
 
   phone: "080-9895-1904",

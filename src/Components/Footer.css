@@ -157,6 +157,34 @@
     display: none;
   }
 }
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 50px 15px 0;
+  }
+  .footer-grid {
+    gap: 30px;
+  }
+  .footer-heading {
+    font-size: 9px;
+  }
+  .footer-links li a {
+    font-size: 13px;
+  }
+  .contact-info {
+    gap: 12px;
+    font-size: 13px;
+  }
+  .footer-bottom {
+    padding: 24px 0;
+  }
+  .copyright {
+    font-size: 11px;
+  }
+  .footer-links-bottom a {
+    font-size: 11px;
+  }
+}
 /* Social Icons */
 /* Modern Social Icons */
 .social-icons {

@@ -26,10 +26,10 @@ const FeaturedProjects = () => {
     {
       id: 1,
       category: "RESIDENTIAL",
-      title: "Lakeview Estate, Jabi-Abuja",
-      description: "160-unit estate with shopping complex, playground & 24-hour utilities",
-      image: "/lakeview.jpg",
-      link: "/projects/lakeview-estate"
+      title: "Walnut Grove Estate, Jahi Abuja",
+      description: "16 units estate with 24-hour utilities",
+      image: "/walnut-grove.jpg",
+      link: "/projects/walnut"
     },
     {
       id: 2,

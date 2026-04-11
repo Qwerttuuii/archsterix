@@ -189,3 +189,33 @@
     padding: 16px 18px 18px;
   }
 }
+
+@media (max-width: 480px) {
+  .who {
+    padding: 60px 15px;
+  }
+
+  .who-title {
+    font-size: 28px;
+  }
+
+  .who-subtitle {
+    font-size: 16px;
+  }
+
+  .ceo-meta {
+    padding: 14px 16px 16px;
+  }
+
+  .ceo-name {
+    font-size: 18px;
+  }
+
+  .ceo-title {
+    font-size: 14px;
+  }
+
+  .ceo-desc {
+    font-size: 14px;
+  }
+}

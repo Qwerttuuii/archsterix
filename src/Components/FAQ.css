@@ -111,3 +111,24 @@
     font-size: 34px;
   }
 }
+
+@media (max-width: 480px) {
+  .faq-section {
+    padding: 60px 15px;
+  }
+  .faq-title {
+    font-size: 28px;
+  }
+  .faq-subtitle {
+    font-size: 16px;
+  }
+  .faq-item {
+    padding: 20px;
+  }
+  .faq-question {
+    font-size: 16px;
+  }
+  .faq-answer {
+    font-size: 14px;
+  }
+}

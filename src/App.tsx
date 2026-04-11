@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home'
 import InfoPage from './Pages/InfoPage'
 import Contact from './Pages/Contact'
+import Projects from './Pages/Projects'
 
 function App() {
   return (
@@ -29,15 +30,9 @@ function App() {
         }
       />
 
-      <Route
-        path="/projects"
-        element={
-          <InfoPage
-            title="Projects"
-            description="View a growing portfolio of projects that reflect our commitment to quality, durability, and forward-thinking design."
-          />
-        }
-      />
+      
+    <Route path="/projects" element={<Projects />} />
+      
 
       <Route
         path="/clients"

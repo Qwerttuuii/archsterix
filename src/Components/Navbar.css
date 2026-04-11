@@ -21,7 +21,7 @@
   gap: 24px;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 6px 40px;
+  padding: 0px 40px;
 }
 
 .logo {
@@ -31,11 +31,11 @@
 }
 
 .logo img {
-  height: 108px;
+  height: 150px;
   width: auto;
   object-fit: contain;
   display: block;
-  filter: drop-shadow(0 10px 30px rgba(201, 166, 70, 0.28));
+  filter: drop-shadow(0 12px 40px rgba(201, 166, 70, 0.4)) brightness(1.05);
 }
 
 .nav-links {
@@ -175,11 +175,11 @@
 
 @media (max-width: 1100px) {
   .navbar-container {
-    padding: 8px 24px;
+    padding: 0px 24px;
   }
 
   .logo img {
-    height: 88px;
+    height: 120px;
   }
 
   .nav-links {
@@ -204,10 +204,35 @@
 
 @media (max-width: 640px) {
   .navbar-container {
-    padding: 8px 16px;
+    padding: 0px 16px;
   }
 
   .logo img {
-    height: 72px;
+    height: 100px;
+  }
+
+  .hamburger span {
+    width: 28px;
+    height: 3px;
+    background: #c9a646;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0px 2px;
+  }
+
+  .logo img {
+    height: 80px;
+  }
+
+  .hamburger {
+    gap: 2px;
+  }
+
+  .hamburger span {
+    width: 18px;
+    height: 3px;
   }
 }

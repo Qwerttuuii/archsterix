@@ -115,3 +115,19 @@
     font-size: 42px;
   }
 }
+
+@media (max-width: 480px) {
+  .consult-cta {
+    padding: 70px 15px;
+  }
+  .cta-title {
+    font-size: 32px;
+  }
+  .cta-subtitle {
+    font-size: 16px;
+  }
+  .cta-button {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+}

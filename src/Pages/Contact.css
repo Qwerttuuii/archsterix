@@ -1,63 +1,88 @@
-/* HERO */
+/* ── Hero ── */
 .contact-hero {
-  height: 70vh;
+  height: 75vh;
+  min-height: 480px;
   background-size: cover;
   background-position: center;
   position: relative;
   display: flex;
   align-items: center;
-  color: white;
+  /* push content below fixed navbar */
+  padding-top: 80px;
 }
 
-.overlay {
+.contact-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.72);
 }
 
 .hero-content {
   position: relative;
+  z-index: 1;
   padding: 0 80px;
-  max-width: 700px;
+  color: white;
+  opacity: 0;
+  transform: translateY(40px);
+  max-width: 800px;
+}
+
+.hero-animate {
+  animation: fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .tag {
   font-size: 12px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   color: #c9a646;
+  display: block;
+  margin-bottom: 12px;
 }
 
 .hero-content h1 {
-  font-size: 64px;
-  line-height: 1.2;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 16px;
 }
 
-.hero-content span {
+.hero-content h1 span {
   color: #c9a646;
 }
 
 .hero-content p {
-  margin-top: 20px;
+  font-size: 18px;
   color: #ccc;
 }
 
-/* SECTION */
+/* ── Contact Section ── */
 .contact-section {
   padding: 100px 80px;
-  background: #f9f9f9;
+  background: #f7f7f7;
 }
 
 .contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  gap: 80px;
+  gap: 60px;
+  align-items: flex-start;
 }
 
-/* LEFT */
+/* ── Left ── */
 .contact-left {
   flex: 1;
+  min-width: 0;
   opacity: 0;
-  transform: translateX(-60px);
-  transition: 0.8s ease;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .contact-left.show {
@@ -66,40 +91,86 @@
 }
 
 .contact-left h2 {
-  font-size: 42px;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #111;
+  line-height: 1.2;
 }
 
-.contact-left span {
+.contact-left h2 span {
   color: #c9a646;
 }
 
-.contact-left p {
-  margin: 20px 0;
-  color: #555;
+.contact-left > p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 36px;
 }
 
-/* INFO */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .info-item {
   display: flex;
-  gap: 15px;
-  margin-bottom: 25px;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
 }
 
 .icon {
-  font-size: 20px;
+  font-size: 22px;
+  color: #c9a646;
+  margin-top: 2px;
+  flex-shrink: 0;
 }
 
-/* RIGHT */
+.info-item h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.info-item p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Right — Glass Form ── */
 .contact-right {
   flex: 1;
-  background: white;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-
+  min-width: 0;
+  padding: 44px 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+  /* FIX: was translateX(60px) with no .show reset */
   opacity: 0;
-  transform: translateX(60px);
-  transition: 0.8s ease;
+  transform: translateX(50px);
+  transition: opacity 0.8s ease 0.15s, transform 0.8s ease 0.15s;
+  box-sizing: border-box;
 }
 
 .contact-right.show {
@@ -107,67 +178,321 @@
   transform: translateX(0);
 }
 
-/* FLOATING INPUT */
+.contact-right::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(201, 166, 70, 0.3), transparent);
+  top: -100px;
+  right: -80px;
+  pointer-events: none;
+  animation: floatGlow 6s ease-in-out infinite;
+}
+
+@keyframes floatGlow {
+  0%, 100% { transform: translate(0, 0); }
+  50%       { transform: translate(-20px, 20px); }
+}
+
+/* ── Inputs ── */
 .input-group {
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 32px;
 }
 
 .input-group input,
 .input-group textarea {
   width: 100%;
-  padding: 16px;
+  padding: 18px 15px 10px;
   border: 1px solid #ddd;
-  outline: none;
-  background: none;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #111;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
+.input-group textarea {
+  min-height: 140px;
+  resize: none;
+  padding-top: 22px;
+}
+
+.input-group input:hover,
+.input-group textarea:hover {
+  border-color: #c9a646;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #c9a646;
+  box-shadow: 0 0 0 3px rgba(201, 166, 70, 0.15);
+  outline: none;
+}
+
+/* Floating label — uses placeholder=" " trick */
 .input-group label {
   position: absolute;
   left: 15px;
   top: 16px;
   color: #999;
-  transition: 0.3s;
-  background: white;
-  padding: 0 5px;
+  font-size: 14px;
+  pointer-events: none;
+  transition: all 0.25s ease;
+  background: transparent;
+  line-height: 1;
 }
 
 .input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
 .input-group textarea:focus + label,
-.input-group input:valid + label,
-.input-group textarea:valid + label {
-  top: -10px;
-  font-size: 12px;
+.input-group textarea:not(:placeholder-shown) + label {
+  top: 6px;
+  font-size: 11px;
   color: #c9a646;
+  letter-spacing: 0.04em;
 }
 
-/* BUTTON */
+.input-group input.error,
+.input-group textarea.error {
+  border-color: #e53935;
+  background: rgba(229, 57, 53, 0.03);
+}
+
+.error-text {
+  color: #e53935;
+  font-size: 12px;
+  margin-top: 6px;
+  display: block;
+}
+
+/* ── Send Button ── */
 .btn-send {
   width: 100%;
   padding: 16px;
-  border: none;
   background: linear-gradient(135deg, #c9a646, #d6b25e);
-  color: white;
-  font-weight: bold;
+  border: none;
+  color: #111;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  letter-spacing: 0.5px;
   cursor: pointer;
-  transition: 0.3s;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-send::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  top: 0;
+  left: -120%;
+  transition: left 0.5s ease;
+}
+
+.btn-send:hover::before {
+  left: 100%;
 }
 
 .btn-send:hover {
   transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 166, 70, 0.35);
 }
 
-/* MOBILE */
+.btn-send:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.success-msg {
+  margin-top: 16px;
+  color: #2e7d32;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ── Map ── */
+.map-section {
+  padding: 80px;
+  background: white;
+  text-align: center;
+}
+
+.map-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 32px;
+}
+
+.map-container {
+  width: 100%;
+  height: 420px;
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.map-container:hover iframe {
+  transform: scale(1.03);
+}
+
+/* ── WhatsApp Float ── */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  background: #25d366;
+  color: white;
+  font-size: 24px;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  z-index: 999;
+  animation: pulse 2.5s ease-in-out infinite;
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.12);
+}
+
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55); }
+  70%  { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .contact-section {
+    padding: 80px 40px;
+  }
+
+  .map-section {
+    padding: 60px 40px;
+  }
+}
+
 @media (max-width: 768px) {
-  .contact-container {
-    flex-direction: column;
+  /* hero */
+  .contact-hero {
+    height: auto;
+    min-height: 380px;
+    padding-top: 100px;
+    padding-bottom: 60px;
   }
 
   .hero-content {
-    padding: 0 20px;
+    padding: 0 24px;
   }
 
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  /* section */
   .contact-section {
     padding: 60px 20px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* form */
+  .contact-right {
+    padding: 32px 24px;
+  }
+
+  /* map */
+  .map-section {
+    padding: 50px 20px;
+  }
+
+  .map-container {
+    height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .contact-left h2 {
+    font-size: 28px;
+  }
+
+  .contact-right {
+    padding: 28px 16px;
+  }
+
+  .input-group {
+    margin-bottom: 24px;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    font-size: 14px;
+    padding: 16px 85px 8px;
+  }
+
+  .input-group label {
+    font-size: 13px;
+    left: 12px;
+  }
+
+  .btn-send {
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .map-section h2 {
+    font-size: 24px;
+  }
+
+  .map-container {
+    height: 260px;
+    border-radius: 10px;
+  }
+
+  .info-item {
+    flex-direction: column;
+    gap: 8px;
   }
 }

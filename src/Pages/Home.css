@@ -195,3 +195,29 @@
     display: none; /* later replace with mobile menu */
   }
 }
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 120px 15px 24px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    gap: 12px;
+  }
+
+  .hero-stats {
+    margin-top: 24px;
+  }
+
+  .stat-item {
+    padding: 14px 18px;
+  }
+}
