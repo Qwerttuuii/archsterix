@@ -5,6 +5,7 @@ import whatWeDoImage from "/what.jpg";
 const WhatWeDo = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [visible, setVisible] = useState(false);
+  const [activeCard, setActiveCard] = useState<number | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -79,6 +80,9 @@ const WhatWeDo = () => {
             key={service.id}
             className={`service-card ${visible ? "show" : ""}`}
             style={{ transitionDelay: `${index * 150}ms` }}
+            onTouchStart={() =>
+              setActiveCard(activeCard === service.id ? null : service.id)
+            }
           >
             <div className="service-image-wrapper">
               <img
@@ -86,7 +90,11 @@ const WhatWeDo = () => {
                 alt={service.title}
                 className="service-image"
               />
-              <div className="service-overlay">
+              <div
+                className={`service-overlay ${
+                  activeCard === service.id ? "active" : ""
+                }`}
+              >
                 <h3 className="service-name">{service.title}</h3>
                 <p className="service-desc">{service.desc}</p>
               </div>

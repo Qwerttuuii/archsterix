@@ -38,8 +38,7 @@ const Projects = () => {
       id: 1,
       title: "Lakeview Estate, Jabi-Abuja",
       category: "residential" as const,
-      description:
-        "160-unit estate with shopping complex, playground & 24-hour utilities",
+      description: "160-unit estate with shopping complex, playground & 24-hour utilities",
       image: "/projects/lakeview-estate.jpg",
       location: "Jabi, Abuja",
     },
@@ -63,7 +62,7 @@ const Projects = () => {
       id: 4,
       title: "Keystone Bank Branch Development, Kogi",
       category: "commercial" as const,
-      description: "Branch development project for Keystone Bank in Lokoja, featuring modern design and construction techniques to create a state-of-the-art banking facility.",
+      description: "Branch development project for Keystone Bank in Lokoja, featuring modern design and construction techniques.",
       image: "/projects/Ongoing_Projects_049.jpg",
       location: "Lokoja, Kogi",
     },
@@ -75,27 +74,27 @@ const Projects = () => {
       image: "/projects/living-faith-church.jpg",
       location: "Akwa-Ibom",
     },
-        {
+    {
       id: 6,
       title: "The Chambery, Dawaki-Abuja",
       category: "On Going" as const,
-      description: "The Chambery,Dawaki offers you a lifestyle wrapped in privacy, Comfort and Modern infrasture",
+      description: "The Chambery, Dawaki offers you a lifestyle wrapped in privacy, comfort and modern infrastructure",
       image: "/projects/chambery.jpeg",
       location: "Abuja",
     },
-          {
+    {
       id: 7,
       title: "Skye Bank, Kano",
       category: "commercial" as const,
-      description: "Branch development project for Skye Bank in Kano, featuring modern design and construction techniques to create a state-of-the-art banking facility.",
+      description: "Branch development project for Skye Bank in Kano featuring state-of-the-art banking facilities.",
       image: "/projects/Ongoing_Projects_054.jpg",
-      location: "kano",
+      location: "Kano",
     },
-     {
+    {
       id: 8,
       title: "Media Plus International, Abuja",
       category: "commercial" as const,
-      description: "Interior Furniture And Equipment Planned And Supplied By Arch-Sterix NIG. LTD.",
+      description: "Interior furniture and equipment planned and supplied by Arch-Sterix Nigeria Limited.",
       image: "/projects/Ongoing_Projects_047.jpg",
       location: "Abuja",
     },
@@ -116,6 +115,8 @@ const Projects = () => {
   return (
     <>
       <Navbar />
+
+      {/* dark background only wraps the projects sections */}
       <div className="projects-page">
 
         {/* ── Hero Slideshow ── */}
@@ -161,11 +162,11 @@ const Projects = () => {
           <div className="filter-container">
             {(
               [
-                { value: "all", label: "ALL" },
-                { value: "residential", label: "RESIDENTIAL" },
-                { value: "commercial", label: "COMMERCIAL" },
-                { value: "institutional", label: "INSTITUTIONAL" },
-                { value: "On Going", label: "ON GOING" },
+                { value: "all",          label: "ALL" },
+                { value: "residential",  label: "RESIDENTIAL" },
+                { value: "commercial",   label: "COMMERCIAL" },
+                { value: "institutional",label: "INSTITUTIONAL" },
+                { value: "On Going",     label: "ON GOING" },
               ] as { value: typeof activeFilter; label: string }[]
             ).map(({ value, label }) => (
               <button
@@ -202,16 +203,18 @@ const Projects = () => {
                     <h3>{project.title}</h3>
                     <p className="project-location">{project.location}</p>
                     <p className="project-desc">{project.description}</p>
-                  
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-        <WhyChooseUs />
-        <Footer />
+
       </div>
+      {/* WhyChooseUs and Footer are OUTSIDE .projects-page
+          so the black background doesn't swallow their styles */}
+      <WhyChooseUs />
+      <Footer />
     </>
   );
 };

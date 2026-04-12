@@ -6,7 +6,7 @@
 /* ── Hero Slideshow ── */
 .projects-hero {
   height: 100vh;
-  min-height: 650px;
+  min-height: 600px;
   position: relative;
   overflow: hidden;
 }
@@ -34,7 +34,7 @@
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(10, 10, 10, 0.5),
+    rgba(10, 10, 10, 0.45),
     rgba(10, 10, 10, 0.85)
   );
   display: flex;
@@ -46,30 +46,26 @@
 
 .hero-content {
   max-width: 900px;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
 .hero-title {
-  font-size: 68px;
+  font-size: 64px;
   font-weight: 700;
   margin-bottom: 20px;
   color: #fff;
 }
 
-.hero-title span {
-  color: #c9a646;
-}
-
 .hero-subtitle {
-  font-size: 20px;
+  font-size: 19px;
   color: #ddd;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* ── Slide Indicators ── */
 .slide-indicators {
   position: absolute;
-  bottom: 40px;
+  bottom: 36px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -81,11 +77,11 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.35);
   border: none;
   cursor: pointer;
   padding: 0;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .indicator.active {
@@ -96,7 +92,7 @@
 /* ── Filter Tabs ── */
 .projects-filter {
   background: #111;
-  padding: 36px 80px;
+  padding: 32px 60px;
   border-bottom: 1px solid #222;
 }
 
@@ -110,7 +106,7 @@
 }
 
 .filter-btn {
-  padding: 14px 32px;
+  padding: 12px 28px;
   background: transparent;
   border: 1px solid #333;
   color: #ccc;
@@ -120,7 +116,7 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  font-size: 14px;
+  font-size: 13px;
   font-family: inherit;
 }
 
@@ -131,7 +127,7 @@
   border-color: #c9a646;
 }
 
-/* ── Projects Grid ── */
+/* ── Grid section ── */
 .projects-grid-section {
   background: #0a0a0a;
   padding: 80px 60px;
@@ -142,35 +138,33 @@
   margin: 0 auto;
 }
 
-.projects-grid {
+.projects-page .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 36px;
+  gap: 32px;
 }
 
-/* ── Project Card ── */
+/* ── Cards — scoped to Projects page only ── */
 .projects-page .project-card {
-  background: #ffffff;
+  background: #fff;
   border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
   display: flex;
   flex-direction: column;
-  min-height: 400px;
-  opacity: 1;
-  transform: none;
+  min-height: 420px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .projects-page .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 24px 60px rgba(201, 166, 70, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(201, 166, 70, 0.18);
 }
 
 .projects-page .project-image-wrapper {
   position: relative;
-  height: 260px;
-  overflow: hidden;
+  height: 240px;
   flex-shrink: 0;
+  overflow: hidden;
   background: #1a1a1a;
 }
 
@@ -183,16 +177,16 @@
 }
 
 .projects-page .project-card:hover .project-image-wrapper img {
-  transform: scale(1.07);
+  transform: scale(1.06);
 }
 
 .projects-page .category-tag {
   position: absolute;
-  top: 16px;
-  left: 16px;
+  top: 14px;
+  left: 14px;
   background: #c9a646;
   color: #111;
-  padding: 6px 16px;
+  padding: 5px 14px;
   border-radius: 30px;
   font-size: 11px;
   font-weight: 700;
@@ -201,58 +195,38 @@
 }
 
 .projects-page .project-info {
-  padding: 24px 28px 28px;
-  background: #ffffff;
+  padding: 22px 26px 26px;
+  background: #fff;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
 .projects-page .project-info h3 {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 700;
+  color: #111;
   margin-bottom: 6px;
   line-height: 1.3;
-  color: #111111;
 }
 
 .projects-page .project-location {
-  color: #c9a646;
   font-size: 13px;
   font-weight: 600;
+  color: #c9a646;
   margin-bottom: 10px;
 }
 
 .projects-page .project-desc {
-  color: #555555;
   font-size: 14px;
+  color: #555;
   line-height: 1.65;
-  margin-bottom: 20px;
   flex: 1;
-}
-
-.projects-page .view-details-btn {
-  background: transparent;
-  border: 2px solid #c9a646;
-  color: #c9a646;
-  padding: 11px 24px;
-  border-radius: 6px;
-  font-size: 13.5px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  align-self: flex-start;
-  font-family: inherit;
-}
-
-.projects-page .view-details-btn:hover {
-  background: #c9a646;
-  color: #111;
 }
 
 /* ── Responsive ── */
 @media (max-width: 1100px) {
-  .projects-grid {
+  .projects-page .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -264,89 +238,47 @@
 @media (max-width: 768px) {
   .projects-hero {
     height: 80vh;
-    min-height: 500px;
+    min-height: 480px;
   }
 
-  .hero-title {
-    font-size: 40px;
-  }
-
-  .hero-subtitle {
-    font-size: 16px;
-  }
+  .hero-title { font-size: 38px; }
+  .hero-subtitle { font-size: 15px; }
 
   .projects-filter {
-    padding: 24px 20px;
+    padding: 22px 20px;
   }
 
   .filter-btn {
-    padding: 10px 20px;
-    font-size: 13px;
+    padding: 10px 18px;
+    font-size: 12px;
   }
 
   .projects-grid-section {
-    padding: 50px 20px;
+    padding: 48px 20px;
   }
 
-  .projects-grid {
+  .projects-page .projects-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 22px;
   }
 }
 
 @media (max-width: 480px) {
   .projects-hero {
     height: 70vh;
-    min-height: 400px;
+    min-height: 380px;
   }
 
-  .hero-title {
-    font-size: 32px;
-  }
+  .hero-title { font-size: 30px; }
+  .hero-subtitle { font-size: 13px; }
 
-  .hero-subtitle {
-    font-size: 14px;
-  }
+  .projects-filter { padding: 18px 14px; }
+  .filter-btn { padding: 8px 14px; font-size: 11px; }
 
-  .projects-filter {
-    padding: 20px 15px;
-  }
+  .projects-grid-section { padding: 36px 14px; }
 
-  .filter-btn {
-    padding: 8px 16px;
-    font-size: 12px;
-  }
-
-  .projects-grid-section {
-    padding: 40px 15px;
-  }
-
-  .project-card {
-    min-height: 350px;
-  }
-
-  .project-image-wrapper {
-    height: 220px;
-  }
-
-  .project-info {
-    padding: 20px 24px 24px;
-  }
-
-  .project-title {
-    font-size: 18px;
-  }
-
-  .project-location {
-    font-size: 12px;
-  }
-
-  .project-desc {
-    font-size: 13px;
-  }
-
-  .view-details-btn {
-    padding: 10px 20px;
-    font-size: 12px;
-  }
+  .project-image-wrapper { height: 200px; }
+  .project-info { padding: 16px 18px 20px; }
+  .project-info h3 { font-size: 16px; }
+  .project-desc { font-size: 13px; }
 }

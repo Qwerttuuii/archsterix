@@ -160,15 +160,33 @@
   justify-content: flex-end;
   padding: 40px 32px 32px;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.service-card:hover .service-overlay,
+.service-overlay.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-name,
+.service-desc {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.45s ease 0.2s, transform 0.45s ease 0.2s;
+}
+
+.service-card:hover .service-name,
+.service-card:hover .service-desc,
+.service-overlay.active .service-name,
+.service-overlay.active .service-desc {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .service-card:hover .service-image {
   transform: scale(1.08);
-}
-
-.service-card:hover .service-overlay {
-  opacity: 1;
 }
 
 .service-name {

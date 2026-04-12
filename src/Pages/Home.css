@@ -1,14 +1,17 @@
+/* ── Hero ── */
 .hero {
   position: relative;
   height: 100vh;
-  background: url("/hero.jpg") center/cover no-repeat;
+  min-height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  padding: 0 80px;
+  padding: 80px 80px 0;
   color: white;
 }
 
-/* Dark overlay */
 .overlay {
   position: absolute;
   inset: 0;
@@ -16,7 +19,6 @@
   pointer-events: none;
 }
 
-/* Content */
 .hero-content {
   position: relative;
   max-width: 600px;
@@ -45,47 +47,63 @@
   margin-top: 20px;
   color: #ccc;
   line-height: 1.6;
+  font-size: 17px;
 }
 
-/* Buttons */
 .hero-buttons {
   margin-top: 30px;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .btn-primary {
   background: #c9a646;
   color: #000;
-  padding: 14px 24px;
+  padding: 14px 28px;
   border: none;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.06em;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #b48c2d;
+  transform: translateY(-2px);
 }
 
 .btn-outline {
   background: transparent;
-  border: 1px solid #aaa;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   color: #fff;
-  padding: 14px 24px;
+  padding: 14px 28px;
   cursor: pointer;
+  font-size: 13px;
+  letter-spacing: 0.06em;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  transition: border-color 0.3s ease, color 0.3s ease;
 }
 
-/* Stats */
+.btn-outline:hover {
+  border-color: #c9a646;
+  color: #c9a646;
+}
+
+/* ── Stats ── */
 .hero-stats {
   position: absolute;
   bottom: 40px;
   left: 80px;
   display: flex;
-  gap: 0;
   z-index: 2;
   background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(6px);
@@ -94,7 +112,7 @@
 
 .stat-item {
   position: relative;
-  padding: 0 38px;
+  padding: 18px 38px;
 }
 
 .stat-item:not(:last-child)::after {
@@ -114,49 +132,37 @@
 
 .hero-stats h2 {
   color: #c9a646;
-  margin: 0 0 8px;
+  margin: 0 0 6px;
   font-size: 2rem;
+  line-height: 1;
 }
 
 .hero-stats p {
-  font-size: 12px;
+  font-size: 11px;
   color: #aaa;
   margin: 0;
   letter-spacing: 0.08em;
 }
 
-/* Animation */
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
+
+/* ── 768px ── */
 @media (max-width: 768px) {
   .hero {
-    min-height: 100vh;
     height: auto;
-    padding: 140px 20px 32px;
-    text-align: left;
+    min-height: 100svh;
+    padding: 110px 24px 40px;
     align-items: flex-start;
     flex-direction: column;
   }
 
-  .hero h1 {
-    font-size: 36px;
-  }
+  .hero h1 { font-size: 36px; }
+  .hero p  { font-size: 15px; }
 
-  .hero-content {
-    max-width: 100%;
-  }
-
-  .hero-buttons {
-    flex-wrap: wrap;
-  }
+  .hero-content { max-width: 100%; }
 
   .hero-stats {
     position: relative;
@@ -164,21 +170,17 @@
     left: auto;
     margin-top: 36px;
     width: 100%;
-    flex-direction: column;
-    gap: 0;
+    flex-wrap: wrap;
   }
 
   .stat-item {
     padding: 18px 22px;
+    flex: 1 1 45%;
   }
 
   .stat-item:not(:last-child)::after {
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: auto;
-    width: 100%;
-    height: 1px;
+    top: auto; bottom: 0; left: 0; right: auto;
+    width: 100%; height: 1px;
     background: linear-gradient(
       to right,
       rgba(201, 166, 70, 0),
@@ -186,38 +188,12 @@
       rgba(201, 166, 70, 0)
     );
   }
-
-  .navbar-container {
-    padding: 15px 20px;
-  }
-
-  .nav-links {
-    display: none; /* later replace with mobile menu */
-  }
 }
 
+/* ── 480px ── */
 @media (max-width: 480px) {
-  .hero {
-    padding: 120px 15px 24px;
-  }
-
-  .hero h1 {
-    font-size: 28px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .hero-buttons {
-    gap: 12px;
-  }
-
-  .hero-stats {
-    margin-top: 24px;
-  }
-
-  .stat-item {
-    padding: 14px 18px;
-  }
+  .hero { padding: 100px 16px 32px; }
+  .hero h1 { font-size: 28px; }
+  .hero p  { font-size: 14px; }
+  .stat-item { flex: 1 1 100%; padding: 14px 18px; }
 }
