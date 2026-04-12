@@ -1,0 +1,135 @@
+.core-values {
+  padding: 120px 80px;
+  background: #0a0a0a;
+  color: #fff;
+}
+
+.core-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 90px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease;
+}
+
+.section-header.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #aaa;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Values Grid */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.value-card {
+  background: #111;
+  padding: 48px 36px;
+  border-radius: 16px;
+  border: 1px solid rgba(201, 166, 70, 0.15);
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  opacity: 0;
+  transform: translateY(60px);
+  height: 100%;
+}
+
+.value-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.value-card:hover {
+  border-color: #c9a646;
+  transform: translateY(-12px);
+  box-shadow: 0 25px 60px rgba(201, 166, 70, 0.15);
+}
+
+.value-icon {
+  color: #c9a646;
+  margin-bottom: 28px;
+  width: 48px;
+  height: 48px;
+}
+
+.value-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.value-desc {
+  color: #ccc;
+  line-height: 1.75;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+@media (max-width: 992px) {
+  .core-values {
+    padding: 100px 40px;
+  }
+  .section-title {
+    font-size: 42px;
+  }
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .core-values {
+    padding: 80px 20px;
+  }
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  .value-card {
+    padding: 36px 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .core-values {
+    padding: 60px 16px;
+  }
+  .section-header {
+    margin-bottom: 60px;
+  }
+  .section-title {
+    font-size: 32px;
+  }
+  .value-title {
+    font-size: 22px;
+  }
+}

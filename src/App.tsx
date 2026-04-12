@@ -4,21 +4,15 @@ import Home from './Pages/Home'
 import InfoPage from './Pages/InfoPage'
 import Contact from './Pages/Contact'
 import Projects from './Pages/Projects'
+import About from './Pages/About'
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
 
-      <Route
-        path="/about"
-        element={
-          <InfoPage
-            title="About Us"
-            description="Learn more about Arch-Sterix Nigeria Limited, our story, our values, and the team behind our construction and development work."
-          />
-        }
-      />
+      
+      <Route path="/about" element={<About />} />
 
       <Route
         path="/services"

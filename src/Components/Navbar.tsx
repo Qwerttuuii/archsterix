@@ -32,9 +32,9 @@ const Navbar = () => {
         <nav className="nav-links">
           <NavLink to="/" className={linkClass}>HOME</NavLink>
           <NavLink to="/about" className={linkClass}>ABOUT</NavLink>
-          <NavLink to="/services" className={linkClass}>SERVICES</NavLink>
+          
           <NavLink to="/projects" className={linkClass}>PROJECTS</NavLink>
-          <NavLink to="/clients" className={linkClass}>CLIENTS</NavLink>
+        
           <NavLink to="/blog" className={linkClass}>BLOG</NavLink>
           <NavLink to="/contact" className={linkClass}>CONTACT</NavLink>
         </nav>
@@ -59,9 +59,7 @@ const Navbar = () => {
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         <NavLink to="/" className={linkClass} onClick={() => setMenuOpen(false)}>HOME</NavLink>
         <NavLink to="/about" className={linkClass} onClick={() => setMenuOpen(false)}>ABOUT</NavLink>
-        <NavLink to="/services" className={linkClass} onClick={() => setMenuOpen(false)}>SERVICES</NavLink>
         <NavLink to="/projects" className={linkClass} onClick={() => setMenuOpen(false)}>PROJECTS</NavLink>
-        <NavLink to="/clients" className={linkClass} onClick={() => setMenuOpen(false)}>CLIENTS</NavLink>
         <NavLink to="/blog" className={linkClass} onClick={() => setMenuOpen(false)}>BLOG</NavLink>
         <NavLink to="/contact" className={linkClass} onClick={() => setMenuOpen(false)}>CONTACT</NavLink>
       </div>

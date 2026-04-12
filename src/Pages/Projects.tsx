@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Projects.css";
 import Navbar from "../Components/Navbar";
+import WhyChooseUs from "../Components/WhyChooseUs";
 import Footer from "../Components/Footer";
 
 const Projects = () => {
@@ -208,7 +209,7 @@ const Projects = () => {
             </div>
           </div>
         </section>
-
+        <WhyChooseUs />
         <Footer />
       </div>
     </>

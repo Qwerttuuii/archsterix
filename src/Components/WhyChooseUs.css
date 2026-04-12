@@ -1,0 +1,274 @@
+.why-choose-us {
+  padding: 120px 80px;
+  background: #0a0a0a;
+  color: #fff;
+}
+
+.why-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.why-content {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.why-content.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.why-badge {
+  display: inline-block;
+  color: #c9a646;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #c9a646;
+  padding-bottom: 4px;
+}
+
+.why-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.why-title span {
+  color: #c9a646;
+}
+
+.why-subtitle {
+  font-size: 18px;
+  line-height: 1.75;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 32px;
+  margin-bottom: 50px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 16.5px;
+}
+
+.check-icon {
+  color: #c9a646;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+/* Progress Bars */
+.stats-section {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.stat-label {
+  flex: 1;
+  font-size: 15px;
+  color: #ddd;
+}
+
+.progress-bar-container {
+  flex: 2;
+  height: 6px;
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(to right, #c9a646, #e5c17a);
+  border-radius: 10px;
+  transition: width 1.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.stat-value {
+  font-weight: 600;
+  color: #c9a646;
+  min-width: 48px;
+}
+
+/* Image Side */
+.why-image {
+  opacity: 0;
+  transform: translateX(80px);
+  transition: all 1s cubic-bezier(0.25, 0.1, 0.25, 1) 0.2s;
+}
+
+.why-image.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.image-wrapper {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+}
+
+.team-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 10, 10, 0.3);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.image-wrapper:hover .play-overlay {
+  opacity: 1;
+}
+
+.play-button {
+  width: 80px;
+  height: 80px;
+  background: #c9a646;
+  color: #111;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 10px 30px rgba(201, 166, 70, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.play-button:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .why-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .why-title {
+    font-size: 42px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-item {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose-us {
+    padding: 80px 24px;
+  }
+
+  .why-title {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .why-subtitle {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  .benefits-grid {
+    gap: 16px;
+  }
+
+  .benefit-item {
+    font-size: 15.5px;
+  }
+
+  .stat-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .progress-bar-container {
+    width: 100%;
+    flex: none;
+  }
+
+  .stat-label {
+    flex: none;
+    width: 100%;
+  }
+
+  .stat-value {
+    min-width: auto;
+    width: 100%;
+    text-align: right;
+  }
+}
+
+@media (max-width: 576px) {
+  .why-choose-us {
+    padding: 60px 16px;
+  }
+
+  .why-title {
+    font-size: 30px;
+  }
+
+  .why-badge {
+    font-size: 14px;
+    letter-spacing: 1.7px;
+  }
+
+  .why-subtitle {
+    font-size: 15px;
+  }
+
+  .benefits-grid {
+    gap: 14px;
+  }
+
+  .stat-item {
+    gap: 10px;
+  }
+
+  .stat-value {
+    text-align: left;
+  }
+
+  .image-wrapper {
+    border-radius: 14px;
+  }
+}
