@@ -4,6 +4,7 @@ import Home from './Pages/Home'
 import InfoPage from './Pages/InfoPage'
 import Contact from './Pages/Contact'
 import Projects from './Pages/Projects'
+import Services from './Pages/Services'
 import About from './Pages/About'
 
 function App() {
@@ -14,29 +15,12 @@ function App() {
       
       <Route path="/about" element={<About />} />
 
-      <Route
-        path="/services"
-        element={
-          <InfoPage
-            title="Our Services"
-            description="Explore the range of services we provide, from planning and project execution to sustainable building and construction delivery."
-          />
-        }
-      />
-
+     
       
     <Route path="/projects" element={<Projects />} />
+   
+    <Route path='/Services' element={<Services />} />
       
-
-      <Route
-        path="/clients"
-        element={
-          <InfoPage
-            title="Clients"
-            description="See the organizations and partners that have trusted us to deliver reliable, high-standard construction solutions."
-          />
-        }
-      />
 
       <Route
         path="/blog"

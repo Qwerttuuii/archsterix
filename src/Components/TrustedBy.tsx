@@ -18,17 +18,11 @@ const TrustedBy = () => {
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-
     return () => observer.disconnect();
   }, []);
 
-  // Add your client logo filenames here (place them in public/ folder)
   const clientLogos = [
-    "/clients/livingfaith.png",
-    "/clients/nddc.jpg",
-    "/clients/ranao.jpg",
     "/clients/fcda.jpg",
-    "/clients/brains.jpg",        // duplicate for seamless loop
     "/clients/kaduna.jpg",
     "/clients/sterlinglogo02.jpg",
     "/clients/gtbank.png",
@@ -36,14 +30,21 @@ const TrustedBy = () => {
     "/clients/skyelogo.png",
     "/clients/urbanshelter.jpg",
     "/clients/brains.jpg",
-    "/clients/fcda.jpg",        // duplicate for seamless loop
-    "/clients/kaduna.jpg",
-    "/clients/sterlinglogo02.jpg",
-    "/clients/gtbank.png",
     "/clients/livingfaith.png",
     "/clients/nddc.jpg",
     "/clients/ranao.jpg",
+    // Duplicates for seamless infinite scroll
     "/clients/fcda.jpg",
+    "/clients/kaduna.jpg",
+    "/clients/sterlinglogo02.jpg",
+    "/clients/gtbank.png",
+    "/clients/fidelitylogo2.png",
+    "/clients/skyelogo.png",
+    "/clients/urbanshelter.jpg",
+    "/clients/brains.jpg",
+    "/clients/livingfaith.png",
+    "/clients/nddc.jpg",
+    "/clients/ranao.jpg",
   ];
 
   return (
@@ -64,10 +65,13 @@ const TrustedBy = () => {
           <div className={`logos-track ${visible ? "animate" : ""}`}>
             {clientLogos.map((logo, index) => (
               <div key={index} className="logo-item">
-                <img 
-                  src={logo} 
-                  alt="Client logo" 
+                <img
+                  src={logo}
+                  alt="Client logo"
                   className="client-logo"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = "none";
+                  }}
                 />
               </div>
             ))}

@@ -48,7 +48,7 @@ const Home = () => {
         className="hero"
         style={{ backgroundImage: `url(${siteConfig.heroImage})` }}
       >
-        <div className="overlay"></div>
+        <div className="home-overlay"></div>
 
         <div className="hero-content">
           <div className="line"></div>
