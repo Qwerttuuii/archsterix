@@ -1,6 +1,6 @@
 .trusted-by {
   padding: 100px 80px;
-  background: #0a0a0a;
+  background: white;
   position: relative;
   overflow: hidden;
 }
@@ -41,7 +41,7 @@
 .trusted-title {
   font-size: 48px;
   font-weight: 700;
-  color: #fff;
+  color: black;
   margin-bottom: 12px;
 }
 
