@@ -20,19 +20,10 @@ const Footer = () => {
 
 {/* Social Media Icons */}
 <div className="social-icons">
-  <a 
-    href="https://facebook.com/archsterix" 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    aria-label="Visit our Facebook"
-  >
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-    </svg>
-  </a>
+
 
   <a 
-    href="https://instagram.com/archsterix" 
+    href="https://instagram.com/archsterixgroup" 
     target="_blank" 
     rel="noopener noreferrer" 
     aria-label="Visit our Instagram"
@@ -43,27 +34,9 @@ const Footer = () => {
     </svg>
   </a>
 
-  <a 
-    href="https://linkedin.com/company/archsterix" 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    aria-label="Visit our LinkedIn"
-  >
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.5 3.5 0 0 0-6.3-2.1 3.5 3.5 0 0 0-.7 2.1v5.3h2.8v-4.9a1.7 1.7 0 0 1 3.4 0v4.9h2.8M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.68-1.68-1.68a1.69 1.69 0 0 0-1.69 1.68c0 .93.76 1.68 1.69 1.68m1.39 9.94v-5.3h-2.8v5.3h2.8z"/>
-    </svg>
-  </a>
 
-  <a 
-    href="https://twitter.com/archsterix" 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    aria-label="Visit our X (Twitter)"
-  >
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M18.244 2.25l-7.584 8.63L4.5 2.25H1.5l7.5 10.5L1.5 21.75h3.084l6.516-7.44 7.5 7.44h3.084L13.5 12.75l7.5-10.5z"/>
-    </svg>
-  </a>
+
+ 
 </div>
           </div>
 

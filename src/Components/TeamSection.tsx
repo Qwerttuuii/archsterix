@@ -24,7 +24,7 @@ const TeamSection = () => {
     {
       id: 1,
       name: "Arc. David Ochigbo mnia fcism",
-      role: "Founder & Managing Director",
+      role: "Chief Executive Officer, Arch Sterix Group",
       image: "/team/ceo.jpeg",
       bio: "With over 18 years of experience in the construction industry, David Ochigbo founded Arch-Sterix with a vision to redefine quality standards in Nigeria.",
       details: "Architect David Ochigbo holds a Master’s Degree in Architecture and is a member of several professional bodies. He is a thoroughbred Construction Professional with over 14 years working experience and extensive Project Management and Construction Site Experience."

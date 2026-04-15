@@ -7,9 +7,11 @@ import Projects from './Pages/Projects'
 import Services from './Pages/Services'
 import About from './Pages/About'
 
+
 function App() {
   return (
     <Routes>
+    
       <Route path="/" element={<Home />} />
 
       
