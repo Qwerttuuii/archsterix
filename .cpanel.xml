@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export NODE_VERSION=18
+    - /opt/alt/alt-nodejs18/root/usr/bin/npm ci
+    - /opt/alt/alt-nodejs18/root/usr/bin/npm run build
+    - /bin/cp -R dist/* /home/archster/public_html/
