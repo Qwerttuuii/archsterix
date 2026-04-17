@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import "./WhatWeDo.css";
-import whatWeDoImage from "/what.jpg";
+
 
 const WhatWeDo = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -28,20 +29,20 @@ const WhatWeDo = () => {
     {
       id: 1,
       title: "Pre-Construction",
-      desc: "We help build clients smarter by laying the right ground work before construction begins. Our preconstruction services include Cost estimation, feasibility studies & design planning",
-      image: "/part 1.jpg",
+      desc: "We help build clients smarter by laying the right groundwork before construction begins. Our pre-construction services include cost estimation, feasibility studies, and design planning.",
+      image: "/part 1.avif",
     },
     {
       id: 2,
-      title: "Construction & Project Management",
-      desc: "Arch-Sterix provides full-spectrum project management & construction services. We manage every aspect of the construction process, ensuring projects are delivered on time, within budget, and to the highest quality standards.",
-      image: "/part 2.jpg",
+      title: "Construction and Project Management",
+      desc: "Arch-Sterix provides full-spectrum project management and construction services. We manage every aspect of the construction process, ensuring projects are delivered on time, within budget, and to the highest quality standards.",
+      image: "/part 2.avif",
     },
     {
       id: 3,
       title: "Post-Construction",
-      desc: "Our involvement doesn't end when the building is complete. We construct a system Commissioning, testing & handover to ensure the facility operates as intended.",
-      image: "/part 3.jpg",
+      desc: "Our involvement does not end when the building is complete. We support system commissioning, testing, and handover to ensure the facility operates as intended.",
+      image: "/part 3.avif",
     },
   ];
 
@@ -58,15 +59,15 @@ const WhatWeDo = () => {
             and beyond. We combine precision engineering with creative
             problem-solving to deliver exceptional results.
           </p>
-          <a href="/Projects" className="explore-btn">
-            EXPLORE ALL WORKS {"->"}
-          </a>
+          <Link to="/projects" className="explore-btn">
+            EXPLORE ALL WORKS -&gt;
+          </Link>
         </div>
 
         <div className={`what-visual ${visible ? "show" : ""}`}>
           <div className="main-image-container">
             <img
-              src={whatWeDoImage}
+              src="/what.avif"
               alt="Arch-Sterix Construction Excellence"
               className="main-image"
             />

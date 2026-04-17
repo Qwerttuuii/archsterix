@@ -1,7 +1,7 @@
 .services-hero {
   height: 65vh;
   min-height: 500px;
-  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url("/abouthero.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url("/abouthero.avif") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -27,26 +27,23 @@ const FeaturedProjects = () => {
       id: 1,
       category: "RESIDENTIAL",
       title: "Walnut Grove Estate, Jahi Abuja",
-      description: "16 units estate with 24-hour utilities",
-      image: "/walnut-grove.jpg",
-      link: "/projects/walnut"
+      description: "16-unit estate with 24-hour utilities",
+      image: "/walnut-grove.avif",
     },
     {
       id: 2,
       category: "COMMERCIAL",
       title: "Sterling Bank, Branch Development",
-      description: "Multi-branch design & build development program",
-      image: "/sterling.jpg",
-      link: "/projects/sterling-bank"
+      description: "Multi-branch design and build development program",
+      image: "/sterling.avif",
     },
     {
       id: 3,
       category: "INSTITUTIONAL",
-      title: "Living Faith Church, Akwa-Ibom",
-      description: "100-capacity church construction",
-      image: "/church.jpg",
-      link: "/projects/living-faith-church"
-    }
+      title: "Living Faith Church, Akwa Ibom",
+      description: "Church construction project with modern facilities",
+      image: "/church.avif",
+    },
   ];
 
   return (
@@ -58,7 +55,8 @@ const FeaturedProjects = () => {
           </h2>
           <div className={`section-underline ${visible ? "line-show" : ""}`}></div>
           <p className="section-subtitle">
-            A selection of projects that showcase our commitment to quality and excellence across sectors.
+            A selection of projects that showcase our commitment to quality and
+            excellence across sectors.
           </p>
         </div>
 
@@ -83,8 +81,6 @@ const FeaturedProjects = () => {
               <div className="project-content">
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
-                
-               
               </div>
             </div>
           ))}
@@ -92,7 +88,7 @@ const FeaturedProjects = () => {
 
         <div className={`view-all ${visible ? "show" : ""}`}>
           <a href="/projects" className="view-all-btn">
-            VIEW ALL PROJECTS →
+            VIEW ALL PROJECTS -&gt;
           </a>
         </div>
       </div>

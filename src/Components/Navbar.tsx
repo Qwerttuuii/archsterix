@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import siteConfig from "../config/SiteConfig";
 
@@ -22,47 +22,79 @@ const Navbar = () => {
   return (
     <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
-        
-        {/* Logo */}
-        <div className="logo">
+        <Link className="logo" to="/" aria-label="Go to Arch-Sterix homepage">
           <img src={siteConfig.logo} alt={siteConfig.companyName} />
-        </div>
+        </Link>
 
-        {/* Desktop Links */}
-        <nav className="nav-links">
-          <NavLink to="/" className={linkClass}>HOME</NavLink>
-          <NavLink to="/about" className={linkClass}>ABOUT</NavLink>
-          
-          <NavLink to="/projects" className={linkClass}>PROJECTS</NavLink>
-          <NavLink to="/Services" className={linkClass}>SERVICES</NavLink>
-          <NavLink to="/blog" className={linkClass}>BLOG</NavLink>
-          <NavLink to="/contact" className={linkClass}>CONTACT</NavLink>
+        <nav className="nav-links" aria-label="Primary navigation">
+          <NavLink to="/" className={linkClass}>
+            HOME
+          </NavLink>
+          <NavLink to="/about" className={linkClass}>
+            ABOUT
+          </NavLink>
+          <NavLink to="/projects" className={linkClass}>
+            PROJECTS
+          </NavLink>
+          <NavLink to="/services" className={linkClass}>
+            SERVICES
+          </NavLink>
+          <NavLink to="/blog" className={linkClass}>
+            BLOG
+          </NavLink>
+          <NavLink to="/contact" className={linkClass}>
+            CONTACT
+          </NavLink>
         </nav>
 
-        {/* Contact Button */}
         <NavLink to="/contact" className="contact-btn">
           Contact Us
         </NavLink>
 
-        {/* Hamburger */}
-        <div
+        <button
+          type="button"
           className={`hamburger ${menuOpen ? "active" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
         >
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
       </div>
 
-      {/* Mobile Menu */}
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        <NavLink to="/" className={linkClass} onClick={() => setMenuOpen(false)}>HOME</NavLink>
-        <NavLink to="/about" className={linkClass} onClick={() => setMenuOpen(false)}>ABOUT</NavLink>
-        <NavLink to="/projects" className={linkClass} onClick={() => setMenuOpen(false)}>PROJECTS</NavLink>
-        <NavLink to="/Services" className={linkClass} onClick={() => setMenuOpen(false)}>SERVICES</NavLink>
-        <NavLink to="/blog" className={linkClass} onClick={() => setMenuOpen(false)}>BLOG</NavLink>
-        <NavLink to="/contact" className={linkClass} onClick={() => setMenuOpen(false)}>CONTACT</NavLink>
+        <NavLink to="/" className={linkClass} onClick={() => setMenuOpen(false)}>
+          HOME
+        </NavLink>
+        <NavLink to="/about" className={linkClass} onClick={() => setMenuOpen(false)}>
+          ABOUT
+        </NavLink>
+        <NavLink
+          to="/projects"
+          className={linkClass}
+          onClick={() => setMenuOpen(false)}
+        >
+          PROJECTS
+        </NavLink>
+        <NavLink
+          to="/services"
+          className={linkClass}
+          onClick={() => setMenuOpen(false)}
+        >
+          SERVICES
+        </NavLink>
+        <NavLink to="/blog" className={linkClass} onClick={() => setMenuOpen(false)}>
+          BLOG
+        </NavLink>
+        <NavLink
+          to="/contact"
+          className={linkClass}
+          onClick={() => setMenuOpen(false)}
+        >
+          CONTACT
+        </NavLink>
       </div>
     </header>
   );

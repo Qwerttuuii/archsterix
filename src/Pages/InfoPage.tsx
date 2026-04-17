@@ -1,13 +1,37 @@
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
+import Seo from "../seo/Seo";
+import { breadcrumbSchema, organizationSchema } from "../seo/schema";
 
 type InfoPageProps = {
   title: string;
   description: string;
+  canonicalPath: string;
+  noIndex?: boolean;
 };
 
-const InfoPage = ({ title, description }: InfoPageProps) => {
+const InfoPage = ({ title, description, canonicalPath, noIndex = false }: InfoPageProps) => {
   return (
     <>
+      <Seo
+        title={`${title} | Arch-Sterix Nigeria Limited`}
+        description={description}
+        canonicalPath={canonicalPath}
+        noIndex={noIndex}
+        jsonLd={[
+          organizationSchema(),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: title, path: canonicalPath },
+          ]),
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: title,
+            description,
+          },
+        ]}
+      />
       <Navbar />
       <main
         style={{
@@ -51,6 +75,7 @@ const InfoPage = ({ title, description }: InfoPageProps) => {
           </p>
         </div>
       </main>
+      <Footer />
     </>
   );
 };

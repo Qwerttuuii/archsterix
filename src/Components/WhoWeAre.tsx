@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./WhoWeAre.css";
-import ceoImage from "/ceo.jpeg";
+
 import siteConfig from "../config/SiteConfig";
 
 const WhoWeAre = () => {
@@ -62,7 +62,7 @@ const WhoWeAre = () => {
         <div className={`who-image ${visible ? "show" : ""}`}>
           <div className="ceo-card">
             <div className="ceo-image-frame">
-              <img src={ceoImage} alt={siteConfig.ceoName} />
+              <img src="/ceo.avif" alt={siteConfig.ceoName} />
             </div>
 
             <div className="ceo-meta">
