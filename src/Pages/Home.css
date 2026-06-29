@@ -101,7 +101,7 @@
 /* ── Stats ── */
 .hero-stats {
   position: absolute;
-  bottom: 40px;
+  bottom: 2px;
   left: 80px;
   display: flex;
   z-index: 2;

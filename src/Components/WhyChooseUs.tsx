@@ -44,7 +44,7 @@ const WhyChooseUs = () => {
           </h2>
 
           <p className="why-subtitle">
-            At Arch-Sterix, quality is not just a promise, it's our foundation. 
+            At Citi Builders, quality is not just a promise, it's our foundation. 
             We combine precision engineering, experienced teams, and uncompromising standards 
             to exceed client expectations every time.
           </p>
@@ -81,9 +81,9 @@ const WhyChooseUs = () => {
         {/* Right Image / Video Area */}
         <div className={`why-image ${visible ? "show" : ""}`}>
           <div className="image-wrapper">
-            {/* You will add your image or video here manually */}
+            
             <img 
-              src="/whychooseus.jpg" 
+              src="/whychooseus.avif" 
               alt="Arch-Sterix Team on Site"
               className="team-image"
               onError={(e) => {

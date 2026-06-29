@@ -1,27 +1,27 @@
 export const faqItems = [
   {
-    question: "What types of projects does Arch-Sterix handle?",
+    question: "What types of real estate properties does Citi Builders develop?",
     answer:
-      "We specialize in residential estates, commercial buildings, institutional structures, and facility management projects across Nigeria.",
+      "We specialize in developing premium residential, commercial, industrial, and institutional real estate across Nigeria. Our portfolio ranges from modern luxury duplexes and multi-family apartment complexes to functional corporate offices and retail spaces. Whether you are looking to buy a finished home, invest in a commercial asset, or develop a custom project, we handle everything from initial architectural concept to final handover",
   },
   {
-    question: "Do you offer design-build services?",
+    question: "Where are your primary property developments located?",
     answer:
-      "Yes. We provide end-to-end design-build solutions from concept through completion, including pre-construction planning and post-construction support.",
+      "Yes. We provide end-to-end design build solutions from concept through completion, including pre-construction planning and post-construction support.",
   },
   {
-    question: "How long does a typical project take?",
+    question: "Does Citi Builders offer flexible payment plans for buyers and investors?",
     answer:
-      "Project duration varies based on scope and complexity. We provide detailed timelines during the consultation phase with realistic milestones.",
+      "Yes, absolutely. We understand that real estate is a significant financial investment. To make property ownership accessible and structured, we offer flexible, milestone-based payment plans tailored to the construction stage of the project. Typically, buyers can make an initial deposit and spread the balance over a specified period (e.g., 6 to 24 months) as development progresses toward completion.",
   },
   {
-    question: "Are you available for projects outside Abuja?",
+    question: "How does Citi Builders ensure the structural integrity and quality of its buildings?",
     answer:
-      "Yes. We undertake projects nationwide across Nigeria with our experienced team and strong project management systems.",
+      "Quality and technical excellence are our core pillars. We combine precision engineering with premium, certified building materials to deliver structurally sound and durable assets. Every project is overseen by highly skilled, COREN-registered structural engineers and project managers who enforce strict quality control measures at every stage—from laying the foundation to the final interior finishings",
   },
   {
-    question: "What makes Arch-Sterix different from other construction companies?",
+    question: "Can you handle custom projects on a client's own land?",
     answer:
-      "Our commitment to uncompromising quality, transparency, and timely delivery. We believe quality is long remembered after price is forgotten.",
+      "Yes, we can. Citi Builders offers comprehensive design build services for clients who wish to develop their own land. Our team will work closely with you to understand your vision, provide architectural and engineering expertise, and manage the entire construction process. We ensure that your custom project meets all regulatory requirements and is completed to the highest standards of quality and craftsmanship.",
   },
 ] as const;

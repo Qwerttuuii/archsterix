@@ -9,12 +9,10 @@ const Footer = () => {
         <div className="footer-grid">
           <div className="footer-col">
             <div className="footer-logo">
-              ARCH-STERIX <span className="gold">NIGERIA LIMITED</span>
+              CITI <span className="gold">BUILDERS</span>
             </div>
             <p className="footer-desc">
-              Delivering excellence in construction, design-build, and facility
-              management since 2011. Quality is long remembered after price is
-              forgotten.
+             Delivering excellence in real estate, custom design  build solutions, and facility management since 2022. Quality is long remembered after price is forgotten.
             </p>
 
             <div className="social-icons">
@@ -73,9 +71,9 @@ const Footer = () => {
                 {siteConfig.city}
               </p>
               <p className="phone">
-                <a href={`tel:${siteConfig.phone}`}>0809 895 1904</a>
+                <a href={`tel:${siteConfig.phone}`}>08XXXXXXXXX</a>
                 <br />
-                <a href={`tel:${siteConfig.alternatePhone}`}>0803 595 1904</a>
+                <a href={`tel:${siteConfig.alternatePhone}`}>080XXXXXXXXX</a>
               </p>
               <p>
                 <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>

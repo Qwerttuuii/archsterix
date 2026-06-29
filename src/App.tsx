@@ -2,10 +2,13 @@ import "./App.css";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import InfoPage from "./Pages/InfoPage";
+import Blog from "./Pages/Blog";
 import Contact from "./Pages/Contact";
 import Projects from "./Pages/Projects";
 import Services from "./Pages/Services";
 import About from "./Pages/About";
+import BlogPost from "./Pages/BlogPost";
+import BlogPost2 from "./Pages/BlogPost2";
 
 function App() {
   return (
@@ -14,18 +17,10 @@ function App() {
       <Route path="/about" element={<About />} />
       <Route path="/projects" element={<Projects />} />
       <Route path="/services" element={<Services />} />
+      <Route path="/blog/:id" element={<BlogPost />} />
+      <Route path="/blog/2" element={<BlogPost2 />} />
       <Route path="/Services" element={<Navigate to="/services" replace />} />
-      <Route
-        path="/blog"
-        element={
-          <InfoPage
-            title="Construction Blog and Insights"
-            description="Read updates, insights, and stories from our work in construction, design-build, project delivery, and the built environment across Nigeria."
-            canonicalPath="/blog"
-            noIndex
-          />
-        }
-      />
+      <Route path="/blog" element={<Blog />} />
       <Route
         path="/privacy"
         element={

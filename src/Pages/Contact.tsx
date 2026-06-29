@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import "./Contact.css";
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 import Seo from "../seo/Seo";
 import siteConfig from "../config/SiteConfig";
 import {
@@ -147,10 +148,10 @@ const Contact = () => {
                   <div>
                     <h4>Phone</h4>
                     <p>
-                      <a href={`tel:${siteConfig.phone}`}>080-9895-1904</a>
+                      <a href={`tel:${siteConfig.phone}`}>080xxxxxx</a>
                     </p>
                     <p>
-                      <a href={`tel:${siteConfig.alternatePhone}`}>080-3595-1904</a>
+                      <a href={`tel:${siteConfig.alternatePhone}`}>080xxxxxxx</a>
                     </p>
                   </div>
                 </div>
@@ -237,7 +238,8 @@ const Contact = () => {
         rel="noreferrer"
         aria-label="Chat with Arch-Sterix on WhatsApp"
       >
-        Chat
+        <FaWhatsapp aria-hidden="true" />
+        <span className="sr-only">Chat with Arch-Sterix on WhatsApp</span>
       </a>
 
       <Footer />

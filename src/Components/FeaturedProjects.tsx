@@ -26,22 +26,22 @@ const FeaturedProjects = () => {
     {
       id: 1,
       category: "RESIDENTIAL",
-      title: "Walnut Grove Estate, Jahi Abuja",
-      description: "16-unit estate with 24-hour utilities",
+      title: "REHOBOTH, Ejemekuru, Imo State",
+      description: "By CITI Builders, a premium residential development offering modern living spaces",
       image: "/walnut-grove.avif",
     },
     {
       id: 2,
       category: "COMMERCIAL",
-      title: "Sterling Bank, Branch Development",
+      title: "Bliss Haven, Owerri, Imo State",
       description: "Multi-branch design and build development program",
       image: "/sterling.avif",
     },
     {
       id: 3,
       category: "INSTITUTIONAL",
-      title: "Living Faith Church, Akwa Ibom",
-      description: "Church construction project with modern facilities",
+      title: "Dynamic View Estate, Owerri, Imo State",
+      description: "By CITI Builders, a premium institutional development offering modern living spaces",
       image: "/church.avif",
     },
   ];

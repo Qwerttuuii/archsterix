@@ -23,18 +23,18 @@ const TeamSection = () => {
   const teamMembers = [
     {
       id: 1,
-      name: "Arc. David Ochigbo MNIA, FCISM",
-      role: "Chief Executive Officer, Arch Sterix Group",
-      image: "/team/ceo.avif",
-      bio: "With over 18 years of experience in the construction industry, David Ochigbo founded Arch-Sterix with a vision to redefine quality standards in Nigeria.",
+      name: "Onwuka Victor ",
+      role: "Chief Executive Officer",
+      image: "/CEOCITI.jpeg",
+      bio: ".",
       details:
-        "Architect David Ochigbo holds a Master's Degree in Architecture and is a member of several professional bodies. He is a thoroughbred construction professional with over 14 years of working experience and extensive project management and construction site experience.",
+        "xxxx.",
     },
     {
       id: 2,
       name: "Olowolohun Micheal Ayodele",
-      role: "Project Manager, Arch Sterix Group",
-      image: "/team/micheal.avif",
+      role: "Project Manager",
+      image: "/man.jpg",
       bio: "A dedicated and goal-oriented project manager with extensive experience in overseeing construction projects.",
       details:
         "Michael holds an HND in Civil Engineering from Federal Polytechnic, Ado-Ekiti. He previously worked at Urban Shelter Ltd and is an active member of the Nigerian Association of Technologists in Engineering (NATE).",
@@ -42,9 +42,9 @@ const TeamSection = () => {
     {
       id: 3,
       name: "Bldr. Masiyer Bitrus",
-      role: "Site Engineer, Arch Sterix Group",
-      image: "/team/bitrus.avif",
-      bio: "A detail-oriented site engineer at Arch-Sterix Group, known for precision, professionalism, and commitment to excellence.",
+      role: "Site Engineer, ",
+      image: "/man.jpg",
+      bio: "A detail oriented site engineer, known for precision, professionalism, and commitment to excellence.",
       details:
         "Masiyer Bitrus has a strong foundation in Building Technology from Covenant University and has contributed to the successful delivery of high-quality developments.",
     },
@@ -52,19 +52,19 @@ const TeamSection = () => {
       id: 4,
       name: "Praise Igbudu",
       role: "Creative Social Media Manager",
-      image: "/team/praise.avif",
+      image: "/man.jpg",
       bio: "Committed to building engaging digital communities and elevating brand presence online.",
       details:
-        "Praise manages all digital communication channels and ensures Arch-Sterix maintains a strong and professional online presence.",
+        "Praise manages all digital communication channels and ensures CITI BUILDER maintains a strong and professional online presence.",
     },
     {
       id: 5,
       name: "Ann Ozioma Okeke",
-      role: "Executive Assistant, Arch Sterix Group",
-      image: "/team/ann.avif",
+      role: "Executive Assistant, ",
+      image: "/man.jpg",
       bio: "Ann Ozioma Okeke is an organized and proactive executive assistant focused on enhancing operational efficiency.",
       details:
-        "At Arch-Sterix Nigeria Limited, Ann manages executive schedules, coordinates meetings, and collaborates with teams to facilitate smooth operations.",
+        " Ann manages executive schedules, coordinates meetings, and collaborates with teams to facilitate smooth operations.",
     },
   ];
 
