@@ -44,7 +44,7 @@ const WhyChooseUs = () => {
           </h2>
 
           <p className="why-subtitle">
-            At Citi Builders, quality is not just a promise, it's our foundation. 
+            At Arch Sterix, quality is not just a promise, it's our foundation. 
             We combine precision engineering, experienced teams, and uncompromising standards 
             to exceed client expectations every time.
           </p>

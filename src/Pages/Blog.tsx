@@ -10,7 +10,7 @@ const posts = [
     title: "Parametricis: Architecture For A Complex World",
     excerpt: "Parametricism is a 21st century architectural and design style defined by the use of algorithms and computational processes. A rule based system where design elements are mutually adaptive, allowing for continous variation and complexity. ",
     date: "April 5, 2026",
-    author: "citi Builders",
+    author: "Arch Steric Group",
     image: "/blog/parametric.avif"
   },
   {
@@ -19,7 +19,7 @@ const posts = [
     title: "How to Combine Luxury and Eco-Friendliness in Modern Home Design",
     excerpt: "The modern concept of luxury is no longer defined by wealth alone, it embraces quality, durability, timeless appeal, and a deep commitment to the environment.",
     date: "March 22, 2026",
-    author: "citi Builders",
+    author: "Arch Steric Group",
     image: "/blog/eco.avif"
   },
   {
@@ -28,7 +28,7 @@ const posts = [
     title: "The Chambery: Redefining Luxury Living In Abuja",
     excerpt: "A New Standard of Sophisticated Urban Living.",
     date: "March 10, 2026",
-    author: "citi Builders",
+    author: "Arch Steric Group",
     image: "/blog/chambery.avif"
   },
   {
@@ -37,7 +37,7 @@ const posts = [
     title: "Modern Luxury Homes: 8 Defining Features That Set Them Apart",
     excerpt: "Luxury today is no longer defined by size alone. It is defined by experience, innovation, confort, and timeless architectural excellence.",
     date: "March 10, 2026",
-    author: "citi Builders",
+    author: "Arch Steric Group",
     image: "/blog/luxury.avif"
   }
 ];
@@ -51,7 +51,7 @@ const Blog = () => {
       <section className="blog-hero">
         <div className="blog-hero-content">
           <h1>Our Blog</h1>
-          <p>Insights, guides, and industry perspectives from the Citi Builders team. On architecture, construction, craft and the long arc of building well</p>
+          <p>Insights, guides, and industry perspectives from the Arch Sterix Group. On architecture, construction, craft and the long arc of building well</p>
         </div>
       </section>
 

@@ -91,10 +91,11 @@ const About = () => {
           <div ref={heroRef} className="about-hero-content">
             <span className="about-tag">ABOUT US</span>
             <h1>
-              About <span>CITI BUILDER</span>
+              About <span>Arch Sterix</span>
             </h1>
             <p>
-            Shaping Nigeria's real estate landscape through exceptional development, design build innovation, and premier property management since 2022. True property value is long remembered after the price is forgotten.
+            Arch-Sterix Nigeria Limited is a fully registered construction and facility management company in Abuja,
+             delivering excellence since 2011..
             </p>
           </div>
         </section>
@@ -106,11 +107,23 @@ const About = () => {
         >
           <div className="about-container">
             <article className={`about-left ${visible ? "show" : ""}`}>
-              <span className="small-tag">Est. 2022</span>
+              <span className="small-tag">Est. 2011</span>
               <h2 id="about-story-heading">Our Story</h2>
               <p>
-                Citi Builders was established in November 2022.
+               Arch Sterix Nigeria Limited was established in November 2011 and is headquartered in Abuja. What started as a focused construction company has grown into a full-service design-build and project management firm. 
                
+              </p>
+              <p>
+                Over the years, we have built a strong reputation for delivering cost-effective, sustainable, and technically sound building solutions across Nigeria. We aim to be recognized as a national and regional leader in the industry through our strength in traditional construction methods and our fresh approach to modern delivery systems and technology.
+              </p>
+              <p>
+                Interior construction, including metal and wood framing, drywall, finish work, painting, flooring, acoustic ceiling, and grid work, is handled in house by our own employees. This gives us stronger quality control and better project delivery than relying solely on subcontracting.
+              </p>
+              <p>
+                Our expertise spans the construction industry spectrum, from smaller renovations to multi-million naira projects. We also specialize in healthcare and industrial facilities, commercial, institutional, and educational buildings, telecommunications and data centers, as well as infrastructure projects such as water and wastewater treatment plants.
+              </p>
+              <p>
+                Our team of construction professionals offers a single-source solution for construction-related needs. Whether it is restoration, site preparation, a new facility, facility renovation, or design, we have the experience and personnel to provide high-quality outcomes on schedule and within budget.
               </p>
              
             </article>

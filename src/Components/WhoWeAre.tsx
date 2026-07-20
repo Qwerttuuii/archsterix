@@ -31,19 +31,20 @@ const WhoWeAre = () => {
         <div className={`who-text ${visible ? "show" : ""}`}>
           <h2 className="who-title">
             Crafting Excellence <br />
-            <span>Since 2022</span>
+            <span>Since 2011</span>
           </h2>
 
           <div className={`underline ${visible ? "line-show" : ""}`}></div>
 
           <p>
-            Citi Builder Group is a fully registered Real Estate and
-            facility management company established in November 2022 in Owerri.
+            Arch Sterix Group is a fully registered construction and facility management
+             company established in November 2011 (RC: 997105). Headquartered in Abuja, we have grown from a construction contractor into a comprehensive design-build and project management firm. 
+            
           </p>
 
           <p>
-            We elevate Nigeria’s real estate landscape across the commercial, residential, industrial, and institutional 
-            sectors partnering with clients to deliver costeffective, sustainable, and expertly engineered property solutions
+            We serve commercial, residential, industrial, and institutional sectors
+             across Nigeria, delivering cost-effective, sustainable, and technically sound building solutions
           </p>
 
           <blockquote>
@@ -58,7 +59,7 @@ const WhoWeAre = () => {
         <div className={`who-image ${visible ? "show" : ""}`}>
           <div className="ceo-card">
             <div className="ceo-image-frame">
-              <img src="/CEOCITI.jpeg" alt={siteConfig.ceoName} />
+              <img src="/ceo.avif" alt={siteConfig.ceoName} />
             </div>
 
             <div className="ceo-meta">

@@ -9,6 +9,8 @@ import Services from "./Pages/Services";
 import About from "./Pages/About";
 import BlogPost from "./Pages/BlogPost";
 import BlogPost2 from "./Pages/BlogPost2";
+import BlogPost3 from "./Pages/BlogPost3";
+import BlogPost4 from "./Pages/BlogPost4";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
       <Route path="/blog/2" element={<BlogPost2 />} />
       <Route path="/Services" element={<Navigate to="/services" replace />} />
       <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/3" element={<BlogPost3 />} />
+      <Route path="/blog/4" element={<BlogPost4 />} />
       <Route
         path="/privacy"
         element={

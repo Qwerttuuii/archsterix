@@ -24,17 +24,17 @@ const TeamSection = () => {
     {
       id: 1,
       name: "Onwuka Victor ",
-      role: "Chief Executive Officer",
-      image: "/CEOCITI.jpeg",
-      bio: ".",
+      role: "Chief Executive Officer, Arch Sterix Group",
+      image: "/ceo.avif",
+      bio: "With over 18 years of experience in the construction industry, David Ochigbo founded Arch-Sterix with a vision to redefine quality standards in Nigeria.",
       details:
-        "xxxx.",
+        "Architect David Ochigbo holds a Master's Degree in Architecture and is a member of several professional bodies. He is a thoroughbred construction professional with over 14 years of working experience and extensive project management and construction site experience.",
     },
     {
       id: 2,
       name: "Olowolohun Micheal Ayodele",
       role: "Project Manager",
-      image: "/man.jpg",
+      image: "/team/micheal.avif",
       bio: "A dedicated and goal-oriented project manager with extensive experience in overseeing construction projects.",
       details:
         "Michael holds an HND in Civil Engineering from Federal Polytechnic, Ado-Ekiti. He previously worked at Urban Shelter Ltd and is an active member of the Nigerian Association of Technologists in Engineering (NATE).",
@@ -43,7 +43,7 @@ const TeamSection = () => {
       id: 3,
       name: "Bldr. Masiyer Bitrus",
       role: "Site Engineer, ",
-      image: "/man.jpg",
+      image: "/team/bitrus.avif",
       bio: "A detail oriented site engineer, known for precision, professionalism, and commitment to excellence.",
       details:
         "Masiyer Bitrus has a strong foundation in Building Technology from Covenant University and has contributed to the successful delivery of high-quality developments.",
@@ -52,7 +52,7 @@ const TeamSection = () => {
       id: 4,
       name: "Praise Igbudu",
       role: "Creative Social Media Manager",
-      image: "/man.jpg",
+      image: "/team/praise.avif",
       bio: "Committed to building engaging digital communities and elevating brand presence online.",
       details:
         "Praise manages all digital communication channels and ensures CITI BUILDER maintains a strong and professional online presence.",
@@ -61,7 +61,7 @@ const TeamSection = () => {
       id: 5,
       name: "Ann Ozioma Okeke",
       role: "Executive Assistant, ",
-      image: "/man.jpg",
+      image: "/team/ann.avif",
       bio: "Ann Ozioma Okeke is an organized and proactive executive assistant focused on enhancing operational efficiency.",
       details:
         " Ann manages executive schedules, coordinates meetings, and collaborates with teams to facilitate smooth operations.",

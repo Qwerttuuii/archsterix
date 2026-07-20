@@ -148,10 +148,10 @@ const Contact = () => {
                   <div>
                     <h4>Phone</h4>
                     <p>
-                      <a href={`tel:${siteConfig.phone}`}>080xxxxxx</a>
+                      <a href={`tel:${siteConfig.phone}`}>08098951904</a>
                     </p>
                     <p>
-                      <a href={`tel:${siteConfig.alternatePhone}`}>080xxxxxxx</a>
+                      <a href={`tel:${siteConfig.alternatePhone}`}>08035951904</a>
                     </p>
                   </div>
                 </div>

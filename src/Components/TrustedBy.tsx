@@ -56,7 +56,7 @@ const TrustedBy = () => {
           </h2>
           <div className={`trusted-underline ${visible ? "line-show" : ""}`}></div>
           <p className="trusted-subtitle">
-            Leading organizations across Nigeria trust Citi Builder for quality and excellence
+            Leading organizations across Nigeria trust Arch Sterix for quality and excellence
           </p>
         </div>
 

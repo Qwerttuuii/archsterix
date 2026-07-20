@@ -54,7 +54,7 @@ const Services = () => {
           <div className="services-hero-content">
             <h1>Our Services</h1>
             <p>
-              citi builders delivers end-to-end construction, project management,
+              Arch Sterix delivers end to end construction, project management,
               renovation, and engineering services across Nigeria.
             </p>
           </div>

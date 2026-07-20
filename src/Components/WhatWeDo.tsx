@@ -35,7 +35,7 @@ const WhatWeDo = () => {
     {
       id: 2,
       title: "Construction and Project Management",
-      desc: "Citi Builders provides full spectrum project management and construction services. We manage every aspect of the construction process, ensuring projects are delivered on time, within budget, and to the highest quality standards.",
+      desc: "Arch Sterix provides full spectrum project management and construction services. We manage every aspect of the construction process, ensuring projects are delivered on time, within budget, and to the highest quality standards.",
       image: "/part 2.avif",
     },
     {
@@ -55,7 +55,9 @@ const WhatWeDo = () => {
           </h2>
           <div className={`what-underline ${visible ? "line-show" : ""}`}></div>
           <p className="what-subtitle">
-          Comprehensive real estate solutions spanning the entire property lifecycle from concept to completion and beyond. We pair technical precision with innovative strategy to maximize value and deliver exceptional results.
+          End-to-end construction solutions from concept through 
+          completion and beyond. We combine precision engineering with creative problem-solving 
+          to deliver exceptional results.
           </p>
           <Link to="/projects" className="explore-btn">
             EXPLORE ALL WORKS -&gt;

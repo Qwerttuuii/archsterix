@@ -20,8 +20,8 @@ import {
 } from "../seo/schema";
 
 const stats = [
-  { value: 5, suffix: "+", label: "YEARS EXPERIENCE" },
-  { value: 50, suffix: "+", label: "LAND SOLD" },
+  { value: 15, suffix: "+", label: "YEARS EXPERIENCE" },
+  { value: 50, suffix: "+", label: "COMPLETED PROJECTS" },
   { value: 10, suffix: "+", label: "MAJOR CLIENTS" },
   { value: 100, suffix: "%", label: "COMMITMENT" },
 ];
@@ -102,7 +102,7 @@ const Home = () => {
             </h1>
 
             <p>
-              Citi Builder Group delivers cost effective, sustainable construction,
+              Arch Sterix Group delivers cost effective, sustainable construction,
               design build, and facility management solutions with integrity and
               excellence across Nigeria.
             </p>
