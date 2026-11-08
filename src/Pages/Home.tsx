@@ -1,3 +1,5 @@
+import ProjectProgress from "../Components/ProjectProgress";
+import AdModal from "../Components/AdModal";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../Components/Navbar";
@@ -85,6 +87,7 @@ const Home = () => {
         ]}
       />
       <Navbar />
+      <AdModal />
 
       <main>
         <section
@@ -132,7 +135,9 @@ const Home = () => {
 
         <WhoWeAre />
         <WhatWeDo />
-        <FeaturedProjects />
+       
+       <FeaturedProjects />
+      <ProjectProgress />
         <TrustedBy />
         <ConsultCTA />
         <FAQ />

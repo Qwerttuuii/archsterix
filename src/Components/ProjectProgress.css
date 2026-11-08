@@ -1,0 +1,407 @@
+/* All classes are prefixed with "pp-" so they cannot collide with other component CSS. */
+
+.pp-section {
+  position: relative;
+  overflow: hidden; /* stops the offset gold frame from causing sideways scroll on phones */
+  padding: 110px clamp(20px, 6vw, 100px);
+  color: #fff;
+  background:
+    radial-gradient(circle at 10% 15%, rgba(201, 166, 70, 0.09), transparent 45%),
+    #0a0a0a;
+}
+
+.pp-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 80px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* ── Copy ── */
+.pp-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 22px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #c9a646;
+}
+
+.pp-eyebrow::before {
+  content: "";
+  width: 36px;
+  height: 3px;
+  background: #c9a646;
+}
+
+.pp-title {
+  margin: 0;
+  font-size: clamp(46px, 6vw, 78px);
+  font-weight: 500;
+  line-height: 1.04;
+  color: #fff;
+}
+
+.pp-title span {
+  display: block;
+}
+
+.pp-title-accent {
+  color: #c9a646;
+}
+
+.pp-location {
+  margin: 20px 0 26px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #c9a646;
+}
+
+.pp-description {
+  margin: 0;
+  max-width: 520px;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #bdbdbd;
+}
+
+/* ── Progress bar ── */
+.pp-progress {
+  max-width: 520px;
+  margin-top: 36px;
+}
+
+.pp-progress-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+.pp-progress-head strong {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: #c9a646;
+}
+
+.pp-track {
+  height: 6px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.pp-fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #b48c2d, #e0c066);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 1.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.pp-status {
+  margin: 12px 0 0;
+  font-size: 14px;
+  color: #999;
+}
+
+/* ── Stats ── */
+.pp-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 520px;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.pp-stat {
+  padding: 24px 18px;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.pp-stat:first-child {
+  padding-left: 0;
+}
+
+.pp-stat:last-child {
+  border-right: none;
+}
+
+.pp-stat strong {
+  display: block;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+}
+
+.pp-stat span {
+  display: block;
+  margin-top: 10px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8f8f8f;
+}
+
+/* ── Buttons ── */
+.pp-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px 32px;
+  margin-top: 40px;
+}
+
+.pp-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 28px;
+  background: #c9a646;
+  color: #000;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.pp-btn-primary:hover {
+  background: #b48c2d;
+  transform: translateY(-2px);
+}
+
+.pp-btn-link {
+  padding-bottom: 6px;
+  border-bottom: 1px solid #c9a646;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.pp-btn-link:hover {
+  color: #c9a646;
+}
+
+.pp-btn-primary:focus-visible,
+.pp-btn-link:focus-visible,
+.pp-control:focus-visible {
+  outline: 2px solid #c9a646;
+  outline-offset: 3px;
+}
+
+/* ── Video ── */
+.pp-media {
+  position: relative;
+}
+
+/* Offset gold outline behind the video. */
+.pp-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translate(16px, 16px);
+  border: 1px solid rgba(201, 166, 70, 0.4);
+  border-radius: 18px;
+  pointer-events: none;
+}
+
+.pp-video-frame {
+  position: relative;
+  aspect-ratio: 5 / 6; /* change to 16 / 9 if your video is landscape and you do not want it cropped */
+  overflow: hidden;
+  border-radius: 18px;
+  background: #111;
+  border: 1px solid rgba(201, 166, 70, 0.25);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
+}
+
+.pp-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pp-video-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0) 38%);
+  pointer-events: none;
+}
+
+.pp-video-tag {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  max-width: calc(100% - 140px);
+  padding: 10px 14px;
+  border-left: 2px solid #c9a646;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.pp-controls {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  gap: 10px;
+}
+
+.pp-control {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.pp-control:hover {
+  background: #c9a646;
+  border-color: #c9a646;
+  color: #000;
+}
+
+/* ── Tablet and below: stack the columns ── */
+@media (max-width: 960px) {
+  .pp-section {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+
+  .pp-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 64px;
+  }
+
+  .pp-description,
+  .pp-progress,
+  .pp-stats {
+    max-width: none;
+  }
+
+  .pp-video-frame {
+    aspect-ratio: 4 / 3;
+  }
+
+  .pp-media::before {
+    transform: translate(10px, 10px);
+  }
+}
+
+/* ── Phones ── */
+@media (max-width: 600px) {
+  .pp-section {
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+
+  .pp-inner {
+    gap: 52px;
+  }
+
+  .pp-description {
+    font-size: 15px;
+  }
+
+  .pp-stat {
+    padding: 20px 12px;
+  }
+
+  .pp-stat strong {
+    font-size: 28px;
+  }
+
+  .pp-stat span {
+    font-size: 10px;
+    letter-spacing: 0.08em;
+  }
+
+  .pp-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 22px;
+  }
+
+  .pp-btn-primary {
+    min-height: 52px;
+    padding: 16px 20px;
+    text-align: center;
+  }
+
+  .pp-btn-link {
+    align-self: flex-start;
+  }
+
+  .pp-video-frame {
+    aspect-ratio: 5 / 4;
+    border-radius: 14px;
+  }
+
+  .pp-media::before {
+    border-radius: 14px;
+  }
+
+  .pp-video-tag {
+    left: 14px;
+    bottom: 14px;
+    max-width: calc(100% - 130px);
+    padding: 8px 12px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+
+  .pp-controls {
+    right: 12px;
+    bottom: 12px;
+    gap: 8px;
+  }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .pp-fill {
+    transition-duration: 0.01ms;
+  }
+
+  .pp-btn-primary:hover {
+    transform: none;
+  }
+}
